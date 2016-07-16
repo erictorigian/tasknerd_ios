@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		072422871D394D9600AEB78E /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072422841D394D9600AEB78E /* MaterialView.swift */; };
+		072422881D394D9600AEB78E /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072422851D394D9600AEB78E /* MaterialButton.swift */; };
+		072422891D394D9600AEB78E /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072422861D394D9600AEB78E /* MaterialTextField.swift */; };
 		07257C6F1D393DB700ED3F6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07257C6E1D393DB700ED3F6E /* AppDelegate.swift */; };
 		07257C741D393DB700ED3F6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07257C721D393DB700ED3F6E /* Main.storyboard */; };
 		07257C761D393DB700ED3F6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07257C751D393DB700ED3F6E /* Assets.xcassets */; };
@@ -16,10 +19,15 @@
 		07A6E6AB1D39438C008E8290 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6AA1D39438C008E8290 /* SignUpVC.swift */; };
 		07A6E6AD1D3943A4008E8290 /* ResetPwdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6AC1D3943A4008E8290 /* ResetPwdVC.swift */; };
 		07A6E6AF1D3943B6008E8290 /* ToDoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6AE1D3943B6008E8290 /* ToDoListVC.swift */; };
+		07A6E6B31D394B41008E8290 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6B21D394B41008E8290 /* Constants.swift */; };
+		07E2A4A01D395214001524A2 /* AddTodoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2A49F1D395214001524A2 /* AddTodoTVC.swift */; };
 		D58C74B8311B58E73EFC7607 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91B2F72576A8627F0C2BA99 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		072422841D394D9600AEB78E /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		072422851D394D9600AEB78E /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
+		072422861D394D9600AEB78E /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
 		07257C6B1D393DB700ED3F6E /* tasknerd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tasknerd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07257C6E1D393DB700ED3F6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07257C731D393DB700ED3F6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -31,6 +39,8 @@
 		07A6E6AA1D39438C008E8290 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		07A6E6AC1D3943A4008E8290 /* ResetPwdVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPwdVC.swift; sourceTree = "<group>"; };
 		07A6E6AE1D3943B6008E8290 /* ToDoListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListVC.swift; sourceTree = "<group>"; };
+		07A6E6B21D394B41008E8290 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		07E2A49F1D395214001524A2 /* AddTodoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTodoTVC.swift; sourceTree = "<group>"; };
 		2896D4F9EB457079A8FA2168 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9CAE77DB82187FDEB6E2DCCE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B91B2F72576A8627F0C2BA99 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				07A6E6A71D394326008E8290 /* Services */,
+				07A6E6B21D394B41008E8290 /* Constants.swift */,
 				07A6E6A61D39431D008E8290 /* Controllers */,
 				07A6E6A51D394316008E8290 /* Model */,
 				07A6E6A31D3942CC008E8290 /* Views */,
@@ -82,6 +93,9 @@
 		07A6E6A31D3942CC008E8290 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				072422841D394D9600AEB78E /* MaterialView.swift */,
+				072422851D394D9600AEB78E /* MaterialButton.swift */,
+				072422861D394D9600AEB78E /* MaterialTextField.swift */,
 				07257C721D393DB700ED3F6E /* Main.storyboard */,
 				07257C771D393DB700ED3F6E /* LaunchScreen.storyboard */,
 			);
@@ -112,6 +126,7 @@
 				07A6E6AA1D39438C008E8290 /* SignUpVC.swift */,
 				07A6E6AC1D3943A4008E8290 /* ResetPwdVC.swift */,
 				07A6E6AE1D3943B6008E8290 /* ToDoListVC.swift */,
+				07E2A49F1D395214001524A2 /* AddTodoTVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -170,11 +185,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Eric Torigian";
 				TargetAttributes = {
 					07257C6A1D393DB700ED3F6E = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -265,9 +281,14 @@
 			files = (
 				07A6E6A91D394375008E8290 /* LoginVC.swift in Sources */,
 				07A6E6AB1D39438C008E8290 /* SignUpVC.swift in Sources */,
+				072422881D394D9600AEB78E /* MaterialButton.swift in Sources */,
+				07E2A4A01D395214001524A2 /* AddTodoTVC.swift in Sources */,
 				07A6E6AF1D3943B6008E8290 /* ToDoListVC.swift in Sources */,
 				07A6E6AD1D3943A4008E8290 /* ResetPwdVC.swift in Sources */,
 				07257C6F1D393DB700ED3F6E /* AppDelegate.swift in Sources */,
+				072422891D394D9600AEB78E /* MaterialTextField.swift in Sources */,
+				072422871D394D9600AEB78E /* MaterialView.swift in Sources */,
+				07A6E6B31D394B41008E8290 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +408,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.torigian.tasknerd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -399,6 +421,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.torigian.tasknerd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

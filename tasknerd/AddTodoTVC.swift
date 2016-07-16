@@ -1,5 +1,5 @@
 //
-//  SignUpVC.swift
+//  AddTodoTVC.swift
 //  tasknerd
 //
 //  Created by Eric Torigian on 7/15/16.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class SignUpVC: UITableViewController {
+class AddTodoTVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      
     }
 
-}
+   }
