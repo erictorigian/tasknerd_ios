@@ -128,11 +128,15 @@
                                             <frame key="frameInset" width="375" height="153"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="quR-Ij-8ii">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="quR-Ij-8ii">
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="150" id="HNm-In-zMX"/>
                                                         <constraint firstAttribute="width" constant="150" id="KBh-tG-YoI"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="NS5-HL-tNj" appends="YES" id="YcZ-aw-trS"/>
+                                                    </connections>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -244,6 +248,9 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REq-Ri-09P">
                                                     <state key="normal" title="Sign Up"/>
+                                                    <connections>
+                                                        <action selector="signUpBtnPressed:" destination="zI4-cc-f05" eventType="touchUpInside" id="RrD-n0-hLX"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -280,9 +287,21 @@
                             <outlet property="delegate" destination="zI4-cc-f05" id="BR6-OS-nr9"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="emailField" destination="emO-Mk-a8M" id="8L1-4C-VyT"/>
+                        <outlet property="passwordConfirmField" destination="U9f-h3-aSs" id="QMZ-QK-8ow"/>
+                        <outlet property="passwordField" destination="5nv-G8-snH" id="7g5-uA-qou"/>
+                        <outlet property="userImageView" destination="quR-Ij-8ii" id="Imj-ee-Jqi"/>
+                        <outlet property="usernameField" destination="53Y-Uy-qQU" id="XaZ-vY-hDg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwg-zm-10m" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="bSb-7f-GSz" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="NS5-HL-tNj">
+                    <connections>
+                        <action selector="userImageTap:" destination="zI4-cc-f05" id="Hff-Hn-7Rn"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="774" y="-337"/>
         </scene>

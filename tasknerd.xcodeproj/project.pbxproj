@@ -21,7 +21,7 @@
 		07A6E6AF1D3943B6008E8290 /* ToDoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6AE1D3943B6008E8290 /* ToDoListVC.swift */; };
 		07A6E6B31D394B41008E8290 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6B21D394B41008E8290 /* Constants.swift */; };
 		07E2A4A01D395214001524A2 /* AddTodoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2A49F1D395214001524A2 /* AddTodoTVC.swift */; };
-		D58C74B8311B58E73EFC7607 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91B2F72576A8627F0C2BA99 /* Pods.framework */; };
+		5B282E7EC66F8C5ED3442B46 /* Pods_tasknerd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA30BC401FE9DF4C9130A6D /* Pods_tasknerd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,9 +41,10 @@
 		07A6E6AE1D3943B6008E8290 /* ToDoListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListVC.swift; sourceTree = "<group>"; };
 		07A6E6B21D394B41008E8290 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		07E2A49F1D395214001524A2 /* AddTodoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTodoTVC.swift; sourceTree = "<group>"; };
-		2896D4F9EB457079A8FA2168 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		9CAE77DB82187FDEB6E2DCCE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A65F4C7895077EC59A0E10C4 /* Pods-tasknerd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tasknerd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tasknerd/Pods-tasknerd.debug.xcconfig"; sourceTree = "<group>"; };
 		B91B2F72576A8627F0C2BA99 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C74A4C4EA9933D55CDF3AB30 /* Pods-tasknerd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tasknerd.release.xcconfig"; path = "Pods/Target Support Files/Pods-tasknerd/Pods-tasknerd.release.xcconfig"; sourceTree = "<group>"; };
+		FBA30BC401FE9DF4C9130A6D /* Pods_tasknerd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tasknerd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D58C74B8311B58E73EFC7607 /* Pods.framework in Frameworks */,
+				5B282E7EC66F8C5ED3442B46 /* Pods_tasknerd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,8 +64,8 @@
 			children = (
 				07257C6D1D393DB700ED3F6E /* tasknerd */,
 				07257C6C1D393DB700ED3F6E /* Products */,
-				A0B20B4A17D3BCDAAAD70469 /* Pods */,
 				9ECB9739C02A2AD8DC37E971 /* Frameworks */,
+				FA265E299E125B90789B6267 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,15 +143,16 @@
 			isa = PBXGroup;
 			children = (
 				B91B2F72576A8627F0C2BA99 /* Pods.framework */,
+				FBA30BC401FE9DF4C9130A6D /* Pods_tasknerd.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A0B20B4A17D3BCDAAAD70469 /* Pods */ = {
+		FA265E299E125B90789B6267 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2896D4F9EB457079A8FA2168 /* Pods.debug.xcconfig */,
-				9CAE77DB82187FDEB6E2DCCE /* Pods.release.xcconfig */,
+				A65F4C7895077EC59A0E10C4 /* Pods-tasknerd.debug.xcconfig */,
+				C74A4C4EA9933D55CDF3AB30 /* Pods-tasknerd.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -162,12 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07257C7D1D393DB700ED3F6E /* Build configuration list for PBXNativeTarget "tasknerd" */;
 			buildPhases = (
-				B5033CE9D3779B02B710F4EE /* Check Pods Manifest.lock */,
+				F8EF8335AE4D8A4C9CD150B1 /* [CP] Check Pods Manifest.lock */,
 				07257C671D393DB700ED3F6E /* Sources */,
 				07257C681D393DB700ED3F6E /* Frameworks */,
 				07257C691D393DB700ED3F6E /* Resources */,
-				3D5F16A6EA6B2A6A55734B49 /* Embed Pods Frameworks */,
-				C83293A0EBC5729217321535 /* Copy Pods Resources */,
+				4E465E4114A98AE1AB8C15D4 /* [CP] Embed Pods Frameworks */,
+				A0E1EB33990C683DDEE9618F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,7 +192,10 @@
 				TargetAttributes = {
 					07257C6A1D393DB700ED3F6E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = C57K6822B6;
+						DevelopmentTeamName = "Eric torigian";
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -227,49 +232,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3D5F16A6EA6B2A6A55734B49 /* Embed Pods Frameworks */ = {
+		4E465E4114A98AE1AB8C15D4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tasknerd/Pods-tasknerd-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B5033CE9D3779B02B710F4EE /* Check Pods Manifest.lock */ = {
+		A0E1EB33990C683DDEE9618F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tasknerd/Pods-tasknerd-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C83293A0EBC5729217321535 /* Copy Pods Resources */ = {
+		F8EF8335AE4D8A4C9CD150B1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -332,7 +337,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eric torigian (JKGPBKNJJ3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Eric torigian (JKGPBKNJJ3)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -378,7 +384,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eric torigian (JKGPBKNJJ3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Eric torigian (JKGPBKNJJ3)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -401,9 +408,11 @@
 		};
 		07257C7E1D393DB700ED3F6E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2896D4F9EB457079A8FA2168 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = A65F4C7895077EC59A0E10C4 /* Pods-tasknerd.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eric torigian (JKGPBKNJJ3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tasknerd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.torigian.tasknerd;
@@ -414,9 +423,11 @@
 		};
 		07257C7F1D393DB700ED3F6E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CAE77DB82187FDEB6E2DCCE /* Pods.release.xcconfig */;
+			baseConfigurationReference = C74A4C4EA9933D55CDF3AB30 /* Pods-tasknerd.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eric torigian (JKGPBKNJJ3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tasknerd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.torigian.tasknerd;
