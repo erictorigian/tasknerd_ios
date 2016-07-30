@@ -10,7 +10,9 @@ import UIKit
 
 class SignUpVC: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-	@IBOutlet weak var userImageView: UIImageView!
+	let networkingService = NetworkingServices()
+    
+    @IBOutlet weak var userImageView: UIImageView!
 	@IBOutlet weak var usernameField: UITextField!
 	@IBOutlet weak var emailField: UITextField!
 	@IBOutlet weak var passwordField: UITextField!
@@ -74,5 +76,7 @@ class SignUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
 	
 	
 	@IBAction func signUpBtnPressed(_ sender: AnyObject) {
+        let data = UIImageJPEGRepresentation(userImageView.image!, 0.8)
+        networkingService.createUser(email: emailField.text!, username: usernameField.text!, password: passwordField.text!, data: data)
 	}
 }
