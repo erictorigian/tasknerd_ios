@@ -8,9 +8,10 @@
 
 import UIKit
 
-class SignUpVC: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
 	let networkingService = NetworkingServices()
+    let pickerController = UIImagePickerController()
     
     @IBOutlet weak var userImageView: UIImageView!
 	@IBOutlet weak var usernameField: UITextField!
@@ -21,37 +22,36 @@ class SignUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        pickerController.delegate = self
         // Do any additional setup after loading the view.
     }
 
 	@IBAction func userImageTap(_ sender: AnyObject) {
-		
-		let pickerController = UIImagePickerController()
-		pickerController.delegate = self
-		pickerController.allowsEditing = true
+
+        pickerController.allowsEditing = true
 		
 		let alertController = UIAlertController(title: "Choose a Picture", message: "Choose your source for your picture", preferredStyle: .actionSheet)
 		
 		let cameraAction = UIAlertAction(title: "Camera", style: .default) { (UIAlertAction) in
 			
-			pickerController.sourceType = .camera
-            pickerController.cameraCaptureMode = .photo
-			self.present(pickerController, animated: true, completion: nil)
+			self.pickerController.sourceType = .camera
+            self.pickerController.cameraCaptureMode = .photo
+			self.present(self.pickerController, animated: true, completion: nil)
 			
 		}
 		
 		let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { (UIAlertAction) in
 			
-			pickerController.sourceType = .photoLibrary
-			self.present(pickerController, animated: true, completion: nil)
+			self.pickerController.sourceType = .photoLibrary
+			self.present(self.pickerController, animated: true, completion: nil)
 			
 		}
 		
 		let savedPhotosAlbumAction = UIAlertAction(title: "Saved Photos Album", style: .default) { (UIAlertAction) in
 			
-			pickerController.sourceType = .savedPhotosAlbum
-			self.present(pickerController, animated: true, completion: nil)
+			self.pickerController.sourceType = .savedPhotosAlbum
+			self.present(self.pickerController, animated: true, completion: nil)
 			
 		}
 		

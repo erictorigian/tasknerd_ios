@@ -56,7 +56,7 @@ struct NetworkingServices {
                 changeRequest.photoURL = metaData!.downloadURL()
                 changeRequest.commitChanges(completion: { (error) in
                     if error != nil {
-                        print(error?.localizedDescription)
+                        print("setUserInfo error\(error?.localizedDescription)")
                     } else {
                         self.saveUserInfo(user: user, username: username, password: password)
                     }
@@ -72,7 +72,7 @@ struct NetworkingServices {
             if error == nil {
                 self.setUserInfo(user: user!, username: username, password: password, data: data)
             } else {
-                print(error!.localizedDescription)
+                print("createUser error \(error!.code)")
             }
             
         })

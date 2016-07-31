@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070A472D1D4D50CC00624C53 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070A472C1D4D50CC00624C53 /* UserProfileVC.swift */; };
 		072422871D394D9600AEB78E /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072422841D394D9600AEB78E /* MaterialView.swift */; };
 		072422881D394D9600AEB78E /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072422851D394D9600AEB78E /* MaterialButton.swift */; };
 		072422891D394D9600AEB78E /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072422861D394D9600AEB78E /* MaterialTextField.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		070A472C1D4D50CC00624C53 /* UserProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		072422841D394D9600AEB78E /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		072422851D394D9600AEB78E /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
 		072422861D394D9600AEB78E /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				07A6E6AC1D3943A4008E8290 /* ResetPwdVC.swift */,
 				07A6E6AE1D3943B6008E8290 /* ToDoListVC.swift */,
 				07E2A49F1D395214001524A2 /* AddTodoTVC.swift */,
+				070A472C1D4D50CC00624C53 /* UserProfileVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				072422871D394D9600AEB78E /* MaterialView.swift in Sources */,
 				07A6E6B31D394B41008E8290 /* Constants.swift in Sources */,
 				07CCB4B11D4D399700826F43 /* NetworkingServices.swift in Sources */,
+				070A472D1D4D50CC00624C53 /* UserProfileVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
