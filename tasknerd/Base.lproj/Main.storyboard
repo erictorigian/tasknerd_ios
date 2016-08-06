@@ -10,7 +10,7 @@
         <!--Sign In-->
         <scene sceneID="2oB-PY-rCP">
             <objects>
-                <viewController id="tq4-oc-3eY" customClass="LoginVC" customModule="tasknerd" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tq4-oc-3eY" customClass="LoginVC" customModule="tasknerd" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="waw-GP-GeC"/>
                         <viewControllerLayoutGuide type="bottom" id="cA5-zW-Jag"/>
@@ -60,7 +60,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
                                 <state key="normal" title="Sign in"/>
                                 <connections>
-                                    <segue destination="Q3Y-q3-Odb" kind="show" id="gDx-Qa-nMs"/>
+                                    <action selector="signInBtnPressed:" destination="tq4-oc-3eY" eventType="touchUpInside" id="q9g-wC-ZJq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXC-00-tzy">
@@ -105,6 +105,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" id="uJ4-b1-y2W"/>
+                    <connections>
+                        <outlet property="emailField" destination="POp-e4-8Z0" id="xFv-nT-9mw"/>
+                        <outlet property="passwordField" destination="xg5-Yr-ki2" id="7Zk-7Y-kCp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5j-YY-Z5t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -178,6 +182,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mil-OL-Gzy">
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <segue destination="qyk-Yh-D1g" kind="unwind" unwindAction="unwindToLogInStoryboard:" id="JDh-cT-ejA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -213,6 +220,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIV-fS-6OB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="qyk-Yh-D1g" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="Tqc-r6-NX6">
                     <connections>
                         <action selector="userImageTap:" destination="b9H-op-6a7" id="Qmt-zM-uyi"/>
@@ -248,6 +256,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
                                 <state key="normal" title="Reset Password"/>
+                                <connections>
+                                    <action selector="resetPwdBtnPressed:" destination="iFG-6Y-4ar" eventType="touchUpInside" id="bjQ-st-qSs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQZ-d3-oV6">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -298,6 +309,9 @@
                             <constraint firstItem="MCY-dI-EEG" firstAttribute="leading" secondItem="Zkl-3p-X7u" secondAttribute="leading" constant="10" id="xBu-Wv-Kp4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailAddressField" destination="8Dg-g6-iOv" id="61q-13-3NZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fy-Al-8fM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nkn-Sx-Ho2" userLabel="Exit" sceneMemberID="exit"/>
@@ -319,7 +333,7 @@
                                         <rect key="frame" x="0.0" y="99" width="375" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Rp-AI-ltE" id="a92-uw-6v9">
-                                            <frame key="frameInset" width="375" height="113"/>
+                                            <frame key="frameInset" width="375" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="todo item name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liP-4Q-CIf">
@@ -407,7 +421,7 @@
                                         <rect key="frame" x="0.0" y="99" width="375" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0T7-xp-T1U" id="SNF-lh-Qee">
-                                            <frame key="frameInset" width="375" height="73"/>
+                                            <frame key="frameInset" width="375" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imj-v0-Wsg">
@@ -434,7 +448,7 @@
                                         <rect key="frame" x="0.0" y="208" width="375" height="224"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kcM-0I-E67" id="zdL-L8-0GN">
-                                            <frame key="frameInset" width="375" height="224"/>
+                                            <frame key="frameInset" width="375" height="223"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Qj-8w-Vjd">
@@ -471,7 +485,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="e5o-UU-ze8">
             <objects>
-                <tabBarController id="Q3Y-q3-Odb" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="ListHome" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Q3Y-q3-Odb" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="HwP-5t-ah6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -508,7 +522,7 @@
         <!--User Profile-->
         <scene sceneID="Z1J-um-YZV">
             <objects>
-                <viewController id="JJB-PV-ni9" sceneMemberID="viewController">
+                <viewController id="JJB-PV-ni9" customClass="UserProfileVC" customModule="tasknerd" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ODa-H4-Gfd"/>
                         <viewControllerLayoutGuide type="bottom" id="CHX-nW-XE4"/>
@@ -561,8 +575,19 @@
                     <toolbarItems>
                         <barButtonItem title="logout" id="7NP-qr-Bsj"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="User Profile" id="68y-x1-GHv"/>
+                    <navigationItem key="navigationItem" title="User Profile" id="68y-x1-GHv">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="bou-rU-XlT">
+                            <connections>
+                                <action selector="LogoutBtnPressed:" destination="JJB-PV-ni9" id="i2a-8f-Ia4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="emailField" destination="8Wa-KX-p2P" id="n8F-dP-LNR"/>
+                        <outlet property="userImage" destination="dcb-qF-npf" id="UId-YJ-izQ"/>
+                        <outlet property="usernameField" destination="TUu-LC-Idl" id="kCb-up-EBc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hir-ml-SMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

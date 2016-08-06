@@ -21,6 +21,7 @@
 		07A6E6AD1D3943A4008E8290 /* ResetPwdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6AC1D3943A4008E8290 /* ResetPwdVC.swift */; };
 		07A6E6AF1D3943B6008E8290 /* ToDoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6AE1D3943B6008E8290 /* ToDoListVC.swift */; };
 		07A6E6B31D394B41008E8290 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6B21D394B41008E8290 /* Constants.swift */; };
+		07ABE0B51D56764A00023960 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ABE0B41D56764A00023960 /* User.swift */; };
 		07CCB4B11D4D399700826F43 /* NetworkingServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CCB4B01D4D399700826F43 /* NetworkingServices.swift */; };
 		07E2A4A01D395214001524A2 /* AddTodoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2A49F1D395214001524A2 /* AddTodoTVC.swift */; };
 		5B282E7EC66F8C5ED3442B46 /* Pods_tasknerd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA30BC401FE9DF4C9130A6D /* Pods_tasknerd.framework */; };
@@ -37,12 +38,14 @@
 		07257C751D393DB700ED3F6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07257C781D393DB700ED3F6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07257C7A1D393DB700ED3F6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		079502B21D4EFC4F00B9B89C /* tasknerd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tasknerd.entitlements; sourceTree = "<group>"; };
 		07A6E6A11D393F31008E8290 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		07A6E6A81D394375008E8290 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		07A6E6AA1D39438C008E8290 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		07A6E6AC1D3943A4008E8290 /* ResetPwdVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPwdVC.swift; sourceTree = "<group>"; };
 		07A6E6AE1D3943B6008E8290 /* ToDoListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListVC.swift; sourceTree = "<group>"; };
 		07A6E6B21D394B41008E8290 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		07ABE0B41D56764A00023960 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		07CCB4B01D4D399700826F43 /* NetworkingServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingServices.swift; sourceTree = "<group>"; };
 		07E2A49F1D395214001524A2 /* AddTodoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTodoTVC.swift; sourceTree = "<group>"; };
 		A65F4C7895077EC59A0E10C4 /* Pods-tasknerd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tasknerd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tasknerd/Pods-tasknerd.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 		07257C6D1D393DB700ED3F6E /* tasknerd */ = {
 			isa = PBXGroup;
 			children = (
+				079502B21D4EFC4F00B9B89C /* tasknerd.entitlements */,
 				07A6E6A71D394326008E8290 /* Services */,
 				07A6E6B21D394B41008E8290 /* Constants.swift */,
 				07A6E6A61D39431D008E8290 /* Controllers */,
@@ -121,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				07CCB4B01D4D399700826F43 /* NetworkingServices.swift */,
+				07ABE0B41D56764A00023960 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -202,6 +207,11 @@
 						DevelopmentTeamName = "Eric torigian";
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -290,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07ABE0B51D56764A00023960 /* User.swift in Sources */,
 				07A6E6A91D394375008E8290 /* LoginVC.swift in Sources */,
 				07A6E6AB1D39438C008E8290 /* SignUpVC.swift in Sources */,
 				072422881D394D9600AEB78E /* MaterialButton.swift in Sources */,
@@ -419,6 +430,7 @@
 			baseConfigurationReference = A65F4C7895077EC59A0E10C4 /* Pods-tasknerd.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = tasknerd/tasknerd.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Eric torigian (JKGPBKNJJ3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tasknerd/Info.plist;
@@ -434,6 +446,7 @@
 			baseConfigurationReference = C74A4C4EA9933D55CDF3AB30 /* Pods-tasknerd.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = tasknerd/tasknerd.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Eric torigian (JKGPBKNJJ3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tasknerd/Info.plist;

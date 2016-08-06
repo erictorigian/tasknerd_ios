@@ -15,8 +15,17 @@ import FirebaseDatabase
 
 struct NetworkingServices {
     
-    let databaseRef = FIRDatabase.database().reference()
-    let storeageRef = FIRStorage.storage().reference()
+    var databaseRef: FIRDatabaseReference! {
+        return FIRDatabase.database().reference()
+    }
+    
+    var storeageRef: FIRStorageReference! {
+        return FIRStorage.storage().reference()
+    }
+    
+    var storeageBaseRef: FIRStorage! {
+        return FIRStorage.storage()
+    }
     
     private func saveUserInfo(user: FIRUser, username: String, password: String) {
         //build User Dictionary
@@ -26,15 +35,17 @@ struct NetworkingServices {
         signInUser(email: user.email!, password: password)
     }
     
-    private func signInUser(email: String, password: String) {
+    func signInUser(email: String, password: String) {
         FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
-            if error == nil {
+            if error!.code == 17011 {
+                print("signIn error:  not logged in")
+            } else if error == nil {
                 if let user = user {
                     print("user \(user.displayName) has signed in")
                 }
             } else {
                 //print the error
-                print(error!.localizedDescription)
+                print("signIn error \(error!.code) \(error!.localizedDescription)")
             }
         })
         
@@ -75,6 +86,16 @@ struct NetworkingServices {
                 print("createUser error \(error!.code)")
             }
             
+        })
+    }
+    
+    func resetPwd(email: String) {
+        FIRAuth.auth()?.sendPasswordReset(withEmail: email, completion: { (error) in
+            if error == nil {
+                print("an email with instructions on how to reset your password has been emailed to you")
+            } else {
+                print("reset password error:  \(error?.code)")
+            }
         })
     }
     
