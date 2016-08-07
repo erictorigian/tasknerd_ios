@@ -424,19 +424,16 @@
                                             <frame key="frameInset" width="375" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imj-v0-Wsg">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="359" id="D5A-pa-oiH"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter todo name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JCE-xE-9YP">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="imj-v0-Wsg" firstAttribute="top" secondItem="SNF-lh-Qee" secondAttribute="topMargin" constant="18" id="Cl6-zE-EZI"/>
-                                                <constraint firstItem="imj-v0-Wsg" firstAttribute="leading" secondItem="SNF-lh-Qee" secondAttribute="leadingMargin" id="GRa-D6-cnG"/>
-                                                <constraint firstItem="imj-v0-Wsg" firstAttribute="trailing" secondItem="SNF-lh-Qee" secondAttribute="trailingMargin" id="XpJ-yV-f57"/>
+                                                <constraint firstItem="JCE-xE-9YP" firstAttribute="top" secondItem="SNF-lh-Qee" secondAttribute="topMargin" constant="13" id="7dA-h1-Nsg"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="JCE-xE-9YP" secondAttribute="bottom" constant="13" id="9yf-pv-hjY"/>
+                                                <constraint firstItem="JCE-xE-9YP" firstAttribute="trailing" secondItem="SNF-lh-Qee" secondAttribute="trailingMargin" id="I0y-Ij-GLx"/>
+                                                <constraint firstItem="JCE-xE-9YP" firstAttribute="leading" secondItem="SNF-lh-Qee" secondAttribute="leadingMargin" id="pjt-1W-71G"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -475,12 +472,20 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add Todo Item" id="u03-ZF-JZO">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fag-2s-6LW"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fag-2s-6LW">
+                            <connections>
+                                <action selector="saveTodo:" destination="8ig-de-hju" id="oIs-jx-838"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="todoDetails" destination="7Qj-8w-Vjd" id="ver-gU-zp6"/>
+                        <outlet property="todoName" destination="JCE-xE-9YP" id="ciz-y8-jci"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="unh-GJ-vyw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3700" y="202"/>
+            <point key="canvasLocation" x="3700" y="201.94902548725639"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="e5o-UU-ze8">

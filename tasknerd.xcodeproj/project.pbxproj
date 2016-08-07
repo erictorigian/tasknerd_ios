@@ -15,6 +15,7 @@
 		07257C741D393DB700ED3F6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07257C721D393DB700ED3F6E /* Main.storyboard */; };
 		07257C761D393DB700ED3F6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07257C751D393DB700ED3F6E /* Assets.xcassets */; };
 		07257C791D393DB700ED3F6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07257C771D393DB700ED3F6E /* LaunchScreen.storyboard */; };
+		07A49C3D1D56E24300E7D1B9 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A49C3C1D56E24300E7D1B9 /* Todo.swift */; };
 		07A6E6A21D393F31008E8290 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07A6E6A11D393F31008E8290 /* GoogleService-Info.plist */; };
 		07A6E6A91D394375008E8290 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6A81D394375008E8290 /* LoginVC.swift */; };
 		07A6E6AB1D39438C008E8290 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6AA1D39438C008E8290 /* SignUpVC.swift */; };
@@ -39,6 +40,7 @@
 		07257C781D393DB700ED3F6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07257C7A1D393DB700ED3F6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		079502B21D4EFC4F00B9B89C /* tasknerd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tasknerd.entitlements; sourceTree = "<group>"; };
+		07A49C3C1D56E24300E7D1B9 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		07A6E6A11D393F31008E8290 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		07A6E6A81D394375008E8290 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		07A6E6AA1D39438C008E8290 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				07CCB4B01D4D399700826F43 /* NetworkingServices.swift */,
 				07ABE0B41D56764A00023960 /* User.swift */,
+				07A49C3C1D56E24300E7D1B9 /* Todo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				07E2A4A01D395214001524A2 /* AddTodoTVC.swift in Sources */,
 				07A6E6AF1D3943B6008E8290 /* ToDoListVC.swift in Sources */,
 				07A6E6AD1D3943A4008E8290 /* ResetPwdVC.swift in Sources */,
+				07A49C3D1D56E24300E7D1B9 /* Todo.swift in Sources */,
 				07257C6F1D393DB700ED3F6E /* AppDelegate.swift in Sources */,
 				072422891D394D9600AEB78E /* MaterialTextField.swift in Sources */,
 				072422871D394D9600AEB78E /* MaterialView.swift in Sources */,
