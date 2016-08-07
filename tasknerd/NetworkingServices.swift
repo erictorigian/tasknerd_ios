@@ -37,15 +37,14 @@ struct NetworkingServices {
     
     func signInUser(email: String, password: String) {
         FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
-            if error!.code == 17011 {
-                print("signIn error:  not logged in")
-            } else if error == nil {
+            if error == nil {
                 if let user = user {
                     print("user \(user.displayName) has signed in")
+                } else {
+                    print("signIn error: \(error?.code)")
                 }
-            } else {
-                //print the error
-                print("signIn error \(error!.code) \(error!.localizedDescription)")
+            } else if error!.code == 17011 {
+                print("signIn error:  not logged in")
             }
         })
         
