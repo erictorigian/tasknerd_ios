@@ -15,9 +15,10 @@
 		07257C741D393DB700ED3F6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07257C721D393DB700ED3F6E /* Main.storyboard */; };
 		07257C761D393DB700ED3F6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07257C751D393DB700ED3F6E /* Assets.xcassets */; };
 		07257C791D393DB700ED3F6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07257C771D393DB700ED3F6E /* LaunchScreen.storyboard */; };
+		077CD2141D5BA81800C6F892 /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077CD2131D5BA81800C6F892 /* TodoCell.swift */; };
 		07A49C3D1D56E24300E7D1B9 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A49C3C1D56E24300E7D1B9 /* Todo.swift */; };
+		07A49C411D56F6F700E7D1B9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A49C401D56F6F700E7D1B9 /* LoginVC.swift */; };
 		07A6E6A21D393F31008E8290 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07A6E6A11D393F31008E8290 /* GoogleService-Info.plist */; };
-		07A6E6A91D394375008E8290 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6A81D394375008E8290 /* LoginVC.swift */; };
 		07A6E6AB1D39438C008E8290 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6AA1D39438C008E8290 /* SignUpVC.swift */; };
 		07A6E6AD1D3943A4008E8290 /* ResetPwdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6AC1D3943A4008E8290 /* ResetPwdVC.swift */; };
 		07A6E6AF1D3943B6008E8290 /* ToDoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6AE1D3943B6008E8290 /* ToDoListVC.swift */; };
@@ -39,10 +40,11 @@
 		07257C751D393DB700ED3F6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07257C781D393DB700ED3F6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07257C7A1D393DB700ED3F6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		077CD2131D5BA81800C6F892 /* TodoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
 		079502B21D4EFC4F00B9B89C /* tasknerd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tasknerd.entitlements; sourceTree = "<group>"; };
 		07A49C3C1D56E24300E7D1B9 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		07A49C401D56F6F700E7D1B9 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		07A6E6A11D393F31008E8290 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		07A6E6A81D394375008E8290 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		07A6E6AA1D39438C008E8290 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		07A6E6AC1D3943A4008E8290 /* ResetPwdVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPwdVC.swift; sourceTree = "<group>"; };
 		07A6E6AE1D3943B6008E8290 /* ToDoListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListVC.swift; sourceTree = "<group>"; };
@@ -136,12 +138,13 @@
 		07A6E6A61D39431D008E8290 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				07A6E6A81D394375008E8290 /* LoginVC.swift */,
+				07A49C401D56F6F700E7D1B9 /* LoginVC.swift */,
 				07A6E6AA1D39438C008E8290 /* SignUpVC.swift */,
 				07A6E6AC1D3943A4008E8290 /* ResetPwdVC.swift */,
 				07A6E6AE1D3943B6008E8290 /* ToDoListVC.swift */,
 				07E2A49F1D395214001524A2 /* AddTodoTVC.swift */,
 				070A472C1D4D50CC00624C53 /* UserProfileVC.swift */,
+				077CD2131D5BA81800C6F892 /* TodoCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -304,8 +307,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				07ABE0B51D56764A00023960 /* User.swift in Sources */,
-				07A6E6A91D394375008E8290 /* LoginVC.swift in Sources */,
 				07A6E6AB1D39438C008E8290 /* SignUpVC.swift in Sources */,
+				07A49C411D56F6F700E7D1B9 /* LoginVC.swift in Sources */,
 				072422881D394D9600AEB78E /* MaterialButton.swift in Sources */,
 				07E2A4A01D395214001524A2 /* AddTodoTVC.swift in Sources */,
 				07A6E6AF1D3943B6008E8290 /* ToDoListVC.swift in Sources */,
@@ -316,6 +319,7 @@
 				072422871D394D9600AEB78E /* MaterialView.swift in Sources */,
 				07A6E6B31D394B41008E8290 /* Constants.swift in Sources */,
 				07CCB4B11D4D399700826F43 /* NetworkingServices.swift in Sources */,
+				077CD2141D5BA81800C6F892 /* TodoCell.swift in Sources */,
 				070A472D1D4D50CC00624C53 /* UserProfileVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

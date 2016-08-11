@@ -38,6 +38,7 @@ struct Todo {
         
     }
     
+    
     mutating func toAnyObject() -> [String: AnyObject] {
         var todoDict: [String: AnyObject]
         todoDict = ["todoName": todoName, "todoDetails": todoDetails,
