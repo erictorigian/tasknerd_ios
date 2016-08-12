@@ -73,6 +73,17 @@ class ToDoListVC: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "updateTodo", sender: self )
+    }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "updateTodo" {
+            
+            let vc = segue.destinationViewController as! updateTodoTVC
+            let indexPath = tableView.indexPathForSelectedRow!
+            
+            vc.todo = todos[indexPath.row]
+        }
+    }
 }
