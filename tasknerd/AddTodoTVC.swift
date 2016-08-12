@@ -31,7 +31,7 @@ class AddTodoTVC: UITableViewController {
         if let name = todoName.text, name != "", let details = todoDetails.text, details != "" {
             var todo = Todo(todoName: name, todoDetails: details, username: (FIRAuth.auth()?.currentUser?.displayName)!)
             todoRef.setValue(todo.toAnyObject())
-            self.navigationController?.popToRootViewController(animated: true)
+            _ = self.navigationController?.popToRootViewController(animated: true)
         }
         
         

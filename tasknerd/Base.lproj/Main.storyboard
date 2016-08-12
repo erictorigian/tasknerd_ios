@@ -565,6 +565,14 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTB-96-T1Q">
                                 <state key="normal" title="Save"/>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="user id" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ae-3O-5O9">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="1UW-bS-TMP"/>
+                                    <constraint firstAttribute="height" constant="40" id="s1H-C8-OlS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -572,10 +580,12 @@
                             <constraint firstItem="xTB-96-T1Q" firstAttribute="centerX" secondItem="BUH-f8-pBV" secondAttribute="centerX" id="99T-An-YxK"/>
                             <constraint firstItem="dcb-qF-npf" firstAttribute="centerX" secondItem="BUH-f8-pBV" secondAttribute="centerX" id="Eim-9v-87A"/>
                             <constraint firstItem="8Wa-KX-p2P" firstAttribute="top" secondItem="TUu-LC-Idl" secondAttribute="bottom" constant="14" id="G9n-nk-mM6"/>
+                            <constraint firstItem="4ae-3O-5O9" firstAttribute="top" secondItem="8Wa-KX-p2P" secondAttribute="bottom" constant="22" id="I4s-SX-hve"/>
                             <constraint firstItem="8Wa-KX-p2P" firstAttribute="centerX" secondItem="BUH-f8-pBV" secondAttribute="centerX" id="Kc6-Cf-9pu"/>
                             <constraint firstItem="TUu-LC-Idl" firstAttribute="centerX" secondItem="BUH-f8-pBV" secondAttribute="centerX" id="LNp-Kt-6Eb"/>
                             <constraint firstItem="TUu-LC-Idl" firstAttribute="top" secondItem="dcb-qF-npf" secondAttribute="bottom" constant="24" id="LWV-1F-zSF"/>
                             <constraint firstItem="TUu-LC-Idl" firstAttribute="centerX" secondItem="BUH-f8-pBV" secondAttribute="centerX" id="T0p-52-w3f"/>
+                            <constraint firstItem="4ae-3O-5O9" firstAttribute="centerX" secondItem="BUH-f8-pBV" secondAttribute="centerX" id="elL-i9-FUh"/>
                             <constraint firstItem="xTB-96-T1Q" firstAttribute="top" secondItem="8Wa-KX-p2P" secondAttribute="bottom" constant="120" id="psE-rl-OdE"/>
                             <constraint firstItem="dcb-qF-npf" firstAttribute="top" secondItem="ODa-H4-Gfd" secondAttribute="bottom" constant="8" id="skz-7A-GDv"/>
                         </constraints>
@@ -593,6 +603,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emailField" destination="8Wa-KX-p2P" id="n8F-dP-LNR"/>
+                        <outlet property="uidField" destination="4ae-3O-5O9" id="cW1-6o-Dsn"/>
                         <outlet property="userImage" destination="dcb-qF-npf" id="UId-YJ-izQ"/>
                         <outlet property="usernameField" destination="TUu-LC-Idl" id="kCb-up-EBc"/>
                     </connections>

@@ -21,6 +21,7 @@ class UserProfileVC: UIViewController {
     
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var uidField: UITextField!
     
     override func viewDidLoad() {
         
@@ -33,6 +34,7 @@ class UserProfileVC: UIViewController {
             
             usernameField.text = name
             emailField.text = email
+            uidField.text = uid
             
             let imageUrl = String(photoUrl!)
             networkingServices.storeageBaseRef.reference(forURL: imageUrl).data(withMaxSize: 1 * 1024 * 1024, completion: { (data, error) in
@@ -49,6 +51,7 @@ class UserProfileVC: UIViewController {
         } else {
             usernameField.text = "Not logged in"
             emailField.text = "Not available"
+            uidField.text = "Not assigned"
             
         }
     }

@@ -39,7 +39,7 @@ class updateTodoTVC: UITableViewController {
             let updateRef = networkingService.databaseRef.child("todos/\(key)")
             updateRef.updateChildValues(todoUpdates.toAnyObject())
             
-            self.navigationController?.popToRootViewController(animated: true)
+            _ = self.navigationController?.popToRootViewController(animated: true)
         }
         
         
