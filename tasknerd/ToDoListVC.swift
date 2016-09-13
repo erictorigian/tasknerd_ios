@@ -32,9 +32,10 @@ class ToDoListVC: UITableViewController {
             
             self.tableView.reloadData()
             
-            }) { (error) in
-                print("todo retrive error:  \(error.code)")
-        }
+            })
+//		{ (error) in
+//                print("todo retrive error:  \(error.code)")
+//        }
     }
     
     //MARK: Tableview functions
@@ -76,14 +77,18 @@ class ToDoListVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "updateTodo", sender: self )
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+	
+	
+	
+    func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "updateTodo" {
             
-            let vc = segue.destinationViewController as! updateTodoTVC
+            let vc = segue.destination as! updateTodoTVC
             let indexPath = tableView.indexPathForSelectedRow!
             
             vc.todo = todos[indexPath.row]
         }
     }
+	
+
 }

@@ -29,21 +29,21 @@ struct Todo {
     }
     
     init(snapshot: FIRDataSnapshot) {
-        self.todoComplete = snapshot.value!["todoComplete"] as! String
-        self.todoName = snapshot.value!["todoName"] as! String
-        self.todoDetails = snapshot.value!["todoDetails"] as! String
-        self.username = snapshot.value!["username"] as! String
+		self.todoComplete = (snapshot.value as? NSDictionary)?["todoComplete"] as? String
+		self.todoName = (snapshot.value as? NSDictionary)?["todoName"] as! String
+		self.todoDetails = (snapshot.value as? NSDictionary)?["todoDetails"] as! String
+		self.username = (snapshot.value as? NSDictionary)?["username"] as! String
         self.key = snapshot.key
         self.ref = snapshot.ref
-        
+		
     }
     
     
     mutating func toAnyObject() -> [String: AnyObject] {
-        var todoDict: [String: AnyObject]
+        var todoDict: [String: String]
         todoDict = ["todoName": todoName, "todoDetails": todoDetails,
                     "todoComplete": todoComplete, "username": username ]
         
-        return todoDict
+        return todoDict as [String : AnyObject]
     }
 }

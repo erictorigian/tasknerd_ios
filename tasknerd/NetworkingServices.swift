@@ -29,7 +29,7 @@ struct NetworkingServices {
     
     private func saveUserInfo(user: FIRUser, username: String, password: String) {
         //build User Dictionary
-        let userInfo = ["email": user.email!, "username": username, "uid": user.uid, "photoURL": String(user.photoURL!)]
+        let userInfo = ["email": user.email!, "username": username, "uid": user.uid, "photoURL": String(describing: user.photoURL!)]
         let userRef = databaseRef.child("users").child(user.uid)
         userRef.setValue(userInfo)
         signInUser(email: user.email!, password: password)
@@ -41,9 +41,9 @@ struct NetworkingServices {
                 if let user = user {
                     print("user \(user.displayName) has signed in")
                 } else {
-                    print("signIn error: \(error?.code)")
+                    print("signIn error: \(error?._code)")
                 }
-            } else if error!.code == 17011 {
+            } else if error!._code == 17011 {
                 print("signIn error:  not logged in")
             }
         })
@@ -82,7 +82,7 @@ struct NetworkingServices {
             if error == nil {
                 self.setUserInfo(user: user!, username: username, password: password, data: data)
             } else {
-                print("createUser error \(error!.code)")
+                print("createUser error \(error!.localizedDescription)")
             }
             
         })
@@ -93,7 +93,7 @@ struct NetworkingServices {
             if error == nil {
                 print("an email with instructions on how to reset your password has been emailed to you")
             } else {
-                print("reset password error:  \(error?.code)")
+                print("reset password error:  \(error?.localizedDescription)")
             }
         })
     }

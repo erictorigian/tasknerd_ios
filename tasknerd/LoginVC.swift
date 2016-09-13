@@ -48,14 +48,14 @@ class LoginVC: UIViewController {
                     self.present(vc, animated: true, completion: nil)
                 }
 
-            } else if error!.code == 17011 {
+            } else if error!._code == 17011 {
                 self.showErrorAlert(title: "Login Error", msg: "You do not have a valid Tasknerd account.   Please sign up")
                 
-            } else if error!.code == 17009 {
+            } else if error!._code == 17009 {
                 self.showErrorAlert(title: "Login Error", msg: "Your passowrd is invalid")
             }
             
-            
+			
             
             self.emailField.text = ""
             self.passwordField.text = ""

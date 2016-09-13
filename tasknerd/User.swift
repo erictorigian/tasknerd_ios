@@ -21,10 +21,10 @@ struct User {
     
     init(snapshot: FIRDataSnapshot) {
         key = snapshot.key
-        username = snapshot.value?["username"] as! String
-        email = snapshot.value?["email"] as! String
-        photoUrl = snapshot.value?["photoUrl"] as! String
-        uid = snapshot.value?["uid"] as! String
+        username = snapshot.value(forKey: "username") as! String
+		email = snapshot.value(forKey: "email") as! String
+		photoUrl = snapshot.value(forKey: "photoUrl") as! String
+		uid = snapshot.value(forKey: "uid") as! String
         ref = snapshot.ref
         
         

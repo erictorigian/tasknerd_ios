@@ -36,10 +36,10 @@ class UserProfileVC: UIViewController {
             emailField.text = email
             uidField.text = uid
             
-            let imageUrl = String(photoUrl!)
+            let imageUrl = String(describing: photoUrl!)
             networkingServices.storeageBaseRef.reference(forURL: imageUrl).data(withMaxSize: 1 * 1024 * 1024, completion: { (data, error) in
                 if  let error = error {
-                    print("user profile image error: \(error.code)")
+                    print("user profile image error: \(error.localizedDescription)")
                 } else {
                     if let data = data {
                         self.userImage.image = UIImage(data: data)

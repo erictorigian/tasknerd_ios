@@ -27,7 +27,7 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         // Do any additional setup after loading the view.
     }
 
-	@IBAction func userImageTap(_ sender: AnyObject) {
+	@IBAction func userImageTap(sender: AnyObject) {
 
         pickerController.allowsEditing = true
 		
@@ -77,7 +77,7 @@ class SignUpVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
 	
 	@IBAction func signUpBtnPressed(_ sender: AnyObject) {
         let data = UIImageJPEGRepresentation(userImageView.image!, 0.8)
-        networkingService.createUser(email: emailField.text!, username: usernameField.text!, password: passwordField.text!, data: data)
+        networkingService.createUser(email: emailField.text!, username: usernameField.text!, password: passwordField.text!, data: data as NSData!)
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login")
         self.present(vc, animated: true, completion: nil)
 
