@@ -80,9 +80,9 @@ class ToDoListVC: UITableViewController {
 	
 	
 	
-    func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "updateTodo" {
-            
+            print("in prepare for seque")
             let vc = segue.destination as! updateTodoTVC
             let indexPath = tableView.indexPathForSelectedRow!
             
