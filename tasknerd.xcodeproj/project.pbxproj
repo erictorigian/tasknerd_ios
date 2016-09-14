@@ -15,6 +15,7 @@
 		07257C741D393DB700ED3F6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07257C721D393DB700ED3F6E /* Main.storyboard */; };
 		07257C761D393DB700ED3F6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07257C751D393DB700ED3F6E /* Assets.xcassets */; };
 		07257C791D393DB700ED3F6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07257C771D393DB700ED3F6E /* LaunchScreen.storyboard */; };
+		072E1FAB1D88F76F00DF1FF2 /* showListItemsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072E1FAA1D88F76F00DF1FF2 /* showListItemsTVC.swift */; };
 		077CD2141D5BA81800C6F892 /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077CD2131D5BA81800C6F892 /* TodoCell.swift */; };
 		07A49C3D1D56E24300E7D1B9 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A49C3C1D56E24300E7D1B9 /* Todo.swift */; };
 		07A49C411D56F6F700E7D1B9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A49C401D56F6F700E7D1B9 /* LoginVC.swift */; };
@@ -46,6 +47,7 @@
 		07257C751D393DB700ED3F6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07257C781D393DB700ED3F6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07257C7A1D393DB700ED3F6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		072E1FAA1D88F76F00DF1FF2 /* showListItemsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showListItemsTVC.swift; sourceTree = "<group>"; };
 		077CD2131D5BA81800C6F892 /* TodoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
 		079502B21D4EFC4F00B9B89C /* tasknerd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tasknerd.entitlements; sourceTree = "<group>"; };
 		07A49C3C1D56E24300E7D1B9 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				07FF523A1D8860B000C1D577 /* ShowListsTVC.swift */,
 				07FF523E1D8866A100C1D577 /* ListCell.swift */,
 				07FF52401D8879A100C1D577 /* AddListTVC.swift */,
+				072E1FAA1D88F76F00DF1FF2 /* showListItemsTVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07ABE0B51D56764A00023960 /* User.swift in Sources */,
+				072E1FAB1D88F76F00DF1FF2 /* showListItemsTVC.swift in Sources */,
 				07A6E6AB1D39438C008E8290 /* SignUpVC.swift in Sources */,
 				07A49C411D56F6F700E7D1B9 /* LoginVC.swift in Sources */,
 				072422881D394D9600AEB78E /* MaterialButton.swift in Sources */,
@@ -469,6 +473,7 @@
 				CODE_SIGN_ENTITLEMENTS = tasknerd/tasknerd.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Eric torigian (JKGPBKNJJ3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = C57K6822B6;
 				INFOPLIST_FILE = tasknerd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.torigian.tasknerd;
@@ -485,6 +490,7 @@
 				CODE_SIGN_ENTITLEMENTS = tasknerd/tasknerd.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Eric torigian (JKGPBKNJJ3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = C57K6822B6;
 				INFOPLIST_FILE = tasknerd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.torigian.tasknerd;

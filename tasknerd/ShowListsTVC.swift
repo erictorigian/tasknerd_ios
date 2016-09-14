@@ -25,7 +25,6 @@ class ShowListsTVC: UITableViewController {
 			for item in snapshot.children {
 				let newList = List(snapshot: item as! FIRDataSnapshot)
 				self.lists.insert(newList, at: 0)
-				print("list: \(item)")
 			}
 			
 			self.tableView.reloadData()
@@ -67,6 +66,21 @@ class ShowListsTVC: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
         
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showListItems", sender: self )
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showListItems" {
+            let vc = segue.destination as! showListItemsTVC
+            let indexPath = tableView.indexPathForSelectedRow!
+            
+            vc.list = lists[indexPath.row]
+        }
     }
 
 

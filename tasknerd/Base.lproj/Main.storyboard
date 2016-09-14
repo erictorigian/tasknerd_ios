@@ -426,11 +426,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listCell" rowHeight="46" id="ufs-jE-mBr" customClass="ListCell" customModule="tasknerd" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listCell" rowHeight="46" id="ufs-jE-mBr" customClass="ListCell" customModule="tasknerd" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="120" width="375" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ufs-jE-mBr" id="eul-jn-kpL">
-                                    <frame key="frameInset" width="375" height="45"/>
+                                    <frame key="frameInset" width="342" height="45"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUz-hb-lhs">
@@ -459,6 +459,7 @@
                                 <connections>
                                     <outlet property="listDetailsLabel" destination="VbM-Jg-icP" id="85Y-ag-vVK"/>
                                     <outlet property="listNameLabel" destination="aUz-hb-lhs" id="hdC-e9-a7a"/>
+                                    <segue destination="lpr-Ir-glp" kind="show" identifier="showListItems" trigger="accessoryAction" id="PA2-69-UT0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -864,6 +865,97 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0P-s8-e4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3894" y="-484"/>
+        </scene>
+        <!--List Name-->
+        <scene sceneID="0Ui-T7-IID">
+            <objects>
+                <tableViewController id="lpr-Ir-glp" customClass="showListItemsTVC" customModule="tasknerd" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="33" sectionHeaderHeight="18" sectionFooterHeight="18" id="NjY-He-Pcp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" red="1" green="0.19742508812525983" blue="0.12510113884357121" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="List Details" id="Dxq-co-KmE">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="94" id="XP7-Jo-pDb">
+                                        <rect key="frame" x="0.0" y="120" width="375" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XP7-Jo-pDb" id="Lav-OU-QYw">
+                                            <frame key="frameInset" width="375" height="93"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Owner: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdp-lp-YNm">
+                                                    <frame key="frameInset" minX="8" minY="8" width="60" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List Owner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhc-LY-zdQ">
+                                                    <frame key="frameInset" minX="83" minY="8" width="284" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="list details" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiK-tr-Rum">
+                                                    <frame key="frameInset" minY="28" width="375" height="65"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="List Items" id="MOZ-ek-77e">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="emu-as-G0f">
+                                        <rect key="frame" x="0.0" y="271" width="375" height="33"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="emu-as-G0f" id="dGD-1B-kbR">
+                                            <frame key="frameInset" width="375" height="32"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Dii-DZ-9AE">
+                                        <rect key="frame" x="0.0" y="304" width="375" height="33"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dii-DZ-9AE" id="hlB-If-lko">
+                                            <frame key="frameInset" width="375" height="32"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="oax-fi-aem">
+                                        <rect key="frame" x="0.0" y="337" width="375" height="33"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oax-fi-aem" id="2tm-nU-vdC">
+                                            <frame key="frameInset" width="375" height="32"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="lpr-Ir-glp" id="0Kf-E0-Zc3"/>
+                            <outlet property="delegate" destination="lpr-Ir-glp" id="Voz-TA-GDN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="List Name" id="v4i-M0-3Jr"/>
+                    <connections>
+                        <outlet property="listDetailsLabel" destination="TiK-tr-Rum" id="L2i-Kg-k7i"/>
+                        <outlet property="listNameTitleLabel" destination="v4i-M0-3Jr" id="4nx-nc-Aji"/>
+                        <outlet property="listOwnerLabel" destination="xhc-LY-zdQ" id="GNb-mL-YSU"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lam-tX-G6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4664.8000000000002" y="-508.69565217391306"/>
         </scene>
     </scenes>
     <resources>
