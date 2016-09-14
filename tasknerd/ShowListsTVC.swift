@@ -50,7 +50,6 @@ class ShowListsTVC: UITableViewController {
 		
 		if let cell = tableView.dequeueReusableCell(withIdentifier: "listCell") as? ListCell {
 			cell.listNameLabel.text = list.listName
-			cell.listOwnerLabel.text = list.listOwner
 			cell.listDetailsLabel.text = list.listDetails
 			return cell
 		} else {
@@ -58,6 +57,18 @@ class ShowListsTVC: UITableViewController {
 		}
 		
 	}
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let ref = lists[indexPath.row].ref
+            ref?.removeValue()
+            lists.remove(at: indexPath.row)
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        
+    }
+
 
 	
 	

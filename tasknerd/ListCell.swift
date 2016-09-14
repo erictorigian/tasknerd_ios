@@ -12,5 +12,5 @@ class ListCell: UITableViewCell {
 	
 	@IBOutlet weak var listNameLabel: UILabel!
 	@IBOutlet weak var listDetailsLabel: UILabel!
-	@IBOutlet weak var listOwnerLabel: UILabel!
+
 }
